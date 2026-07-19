@@ -1,4 +1,4 @@
-﻿bcrypt==5.0.0
+bcrypt==5.0.0
 blinker==1.8.2
 certifi==2026.1.4
 cffi==2.1.0
