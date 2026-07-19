@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - Admin Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/profil.css" />
+</head>
+<body>
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__logo">Admin Panel</div>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__link">🏠 Dashboard</a>
+        <a href="profil.html" class="sidebar__link sidebar__link--active">📄 Profil</a>
+        <a href="experience.html" class="sidebar__link">💼 Experience</a>
+        <a href="projects.html" class="sidebar__link">📁 Projects</a>
+        <a href="skills.html" class="sidebar__link">⭐ Skills</a>
+        <a href="social.html" class="sidebar__link">🔗 Social Links</a>
+        <a href="akun.html" class="sidebar__link">👤 Akun</a>
+      </nav>
+      <div class="sidebar__logout">
+        <a href="#" id="logout-link" class="sidebar__link">↪ Logout</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="main-content__header">
+        <h1 class="main-content__title">Profil</h1>
+      </div>
+      <p style="color: var(--ink-soft); font-size: 0.85rem; margin-top: -20px; margin-bottom: 24px;">
+        Data ini akan ditampilkan di bagian "Tentang Saya" pada halaman utama portofolio.
+      </p>
+
+      <div class="card profil-card">
+        <form id="profil-form">
+          <div class="profil-photo-row">
+            <img id="preview-foto" class="profil-photo-preview" src="https://via.placeholder.com/120x150?text=Foto" alt="Preview foto" />
+            <div class="form-group" style="flex: 1;">
+              <label for="foto">Ganti Foto Profil (opsional)</label>
+              <input type="file" id="foto" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="profil-grid">
+            <div class="form-group">
+              <label for="nama_lengkap">Nama Lengkap</label>
+              <input type="text" id="nama_lengkap" required />
+            </div>
+            <div class="form-group">
+              <label for="nama_panggilan">Nama Panggilan</label>
+              <input type="text" id="nama_panggilan" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="telepon">Telepon</label>
+              <input type="text" id="telepon" />
+            </div>
+            <div class="form-group">
+              <label for="tempat_lahir">Tempat Lahir</label>
+              <input type="text" id="tempat_lahir" />
+            </div>
+            <div class="form-group">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+              <input type="date" id="tanggal_lahir" />
+            </div>
+            <div class="form-group">
+              <label for="universitas">Universitas</label>
+              <input type="text" id="universitas" />
+            </div>
+            <div class="form-group">
+              <label for="fakultas">Fakultas</label>
+              <input type="text" id="fakultas" />
+            </div>
+            <div class="form-group">
+              <label for="prodi">Program Studi</label>
+              <input type="text" id="prodi" />
+            </div>
+            <div class="form-group">
+              <label for="semester">Semester</label>
+              <input type="text" id="semester" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat">Alamat / Domisili</label>
+            <textarea id="alamat" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary" id="profil-submit">Simpan Perubahan</button>
+          </div>
+          <p class="status-text" id="profil-status"></p>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/base.js"></script>
+  <script src="js/profil.js"></script>
+</body>
+</html>

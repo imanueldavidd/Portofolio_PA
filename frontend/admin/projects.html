@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Admin Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body>
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__logo">Admin Panel</div>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__link">🏠 Dashboard</a>
+        <a href="profil.html" class="sidebar__link">📄 Profil</a>
+        <a href="experience.html" class="sidebar__link">💼 Experience</a>
+        <a href="projects.html" class="sidebar__link sidebar__link--active">📁 Projects</a>
+        <a href="skills.html" class="sidebar__link">⭐ Skills</a>
+        <a href="social.html" class="sidebar__link">🔗 Social Links</a>
+        <a href="akun.html" class="sidebar__link">👤 Akun</a>
+      </nav>
+      <div class="sidebar__logout">
+        <a href="#" id="logout-link" class="sidebar__link">↪ Logout</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="main-content__header">
+        <h1 class="main-content__title">Projects</h1>
+        <button class="btn btn--primary" id="btn-add-project">+ Tambah Proyek</button>
+      </div>
+
+      <div class="projects-grid" id="projects-list">
+        <p class="empty-state">Memuat data proyek...</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= MODAL FORM ================= -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal">
+      <h2 class="modal__title" id="modal-title">Tambah Proyek</h2>
+      <form id="project-form">
+        <input type="hidden" id="project-id" />
+        <div class="form-group">
+          <label for="judul">Judul Proyek</label>
+          <input type="text" id="judul" placeholder="Contoh: Website Portofolio" required />
+        </div>
+        <div class="form-group">
+          <label for="deskripsi">Deskripsi</label>
+          <textarea id="deskripsi" rows="3" placeholder="Jelaskan proyek ini singkat..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="link_project">Link Proyek (opsional)</label>
+          <input type="url" id="link_project" placeholder="https://github.com/username/repo" />
+        </div>
+        <div class="form-group">
+          <label for="gambar">Gambar Proyek <span id="gambar-hint" style="font-weight:400;">(opsional saat edit)</span></label>
+          <input type="file" id="gambar" accept="image/*" />
+          <img id="preview-image" style="display:none; margin-top:8px; border-radius:8px; max-height:140px;" />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary" id="project-submit">Simpan</button>
+          <button type="button" class="btn btn--ghost" id="btn-cancel">Batal</button>
+        </div>
+        <p class="status-text" id="project-status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/base.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

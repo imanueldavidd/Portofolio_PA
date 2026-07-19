@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Admin Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <div class="sidebar__logo">Admin Panel</div>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__link sidebar__link--active">🏠 Dashboard</a>
+        <a href="profil.html" class="sidebar__link">📄 Profil</a>
+        <a href="experience.html" class="sidebar__link">💼 Experience</a>
+        <a href="projects.html" class="sidebar__link">📁 Projects</a>
+        <a href="skills.html" class="sidebar__link">⭐ Skills</a>
+        <a href="social.html" class="sidebar__link">🔗 Social Links</a>
+        <a href="akun.html" class="sidebar__link">👤 Akun</a>
+      </nav>
+      <div class="sidebar__logout">
+        <a href="#" id="logout-link" class="sidebar__link">↪ Logout</a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+      <div class="main-content__header">
+        <h1 class="main-content__title">Dashboard</h1>
+        <span class="main-content__greeting" id="greeting">Halo, Admin</span>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-grid" id="stat-grid">
+        <div class="empty-state">Memuat statistik...</div>
+      </div>
+
+      <!-- Aksi cepat -->
+      <div class="card" style="margin-top: 24px;">
+        <h2 class="card__section-title">Aksi Cepat</h2>
+        <div class="quick-actions">
+          <a href="experience.html" class="btn btn--primary">+ Tambah Pengalaman</a>
+          <a href="projects.html" class="btn btn--primary">+ Tambah Proyek</a>
+          <a href="skills.html" class="btn btn--primary">+ Tambah Skill</a>
+        </div>
+      </div>
+
+      <!-- Data terbaru -->
+      <div class="recent-grid" style="margin-top: 24px;">
+        <div class="card">
+          <h2 class="card__section-title">Pengalaman Terbaru</h2>
+          <div id="recent-experience"><p class="empty-state">Memuat...</p></div>
+        </div>
+        <div class="card">
+          <h2 class="card__section-title">Proyek Terbaru</h2>
+          <div id="recent-projects"><p class="empty-state">Memuat...</p></div>
+        </div>
+        <div class="card">
+          <h2 class="card__section-title">Skills</h2>
+          <div id="recent-skills"><p class="empty-state">Memuat...</p></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/base.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.profil-card { max-width: 720px; }
+
+.profil-photo-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profil-photo-preview {
+  width: 100px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg-muted);
+  flex-shrink: 0;
+}
+
+.profil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+}
+
+@media (max-width: 600px) {
+  .profil-grid { grid-template-columns: 1fr; }
+  .profil-photo-row { flex-direction: column; }
+}

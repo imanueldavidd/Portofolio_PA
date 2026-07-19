@@ -1,0 +1,21 @@
+.akun-card { max-width: 480px; }
+
+.akun-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.akun-info__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.akun-info__row:last-child { border-bottom: none; }
+
+.akun-info__label { color: var(--ink-soft); font-family: var(--font-mono); font-size: 0.8rem; }
+
+.akun-form .form-group:last-of-type { margin-bottom: 20px; }

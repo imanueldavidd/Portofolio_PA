@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Frontend/profil/css/style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <span class="navbar__logo">portofolio David</span>
+      <div class="navbar__right">
+        <ul class="navbar__links">
+          <li><a href="#about">profil</a></li>
+          <li><a href="#skills">skill</a></li>
+          <li><a href="#experience">pengalaman</a></li>
+          <li><a href="#projects">proyek</a></li>
+          <li><a href="#contact">kontak</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">🌙</button>
+        <a href="Frontend/admin/login.html" class="btn-admin-login">Login Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= ABOUT / PROFIL ================= -->
+  <section id="about" class="section reveal" style="padding-top: 48px;">
+    <p class="section__eyebrow">profil</p>
+    <h2 class="section__title">Tentang Saya</h2>
+    <div class="about__grid" id="about-content">
+      <!-- diisi otomatis lewat JavaScript -->
+      <p class="loading-text">Memuat data profil...</p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section section--muted reveal">
+    <p class="section__eyebrow">skill</p>
+    <h2 class="section__title">Kemampuan Teknis</h2>
+    <div class="skills-content" id="skills-content">
+      <p class="loading-text">Memuat data skill...</p>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="section reveal">
+    <p class="section__eyebrow">pengalaman</p>
+    <h2 class="section__title">Riwayat Pengalaman</h2>
+    <div class="timeline" id="experience-content">
+      <p class="loading-text">Memuat data pengalaman...</p>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section section--muted reveal">
+    <p class="section__eyebrow">proyek</p>
+    <h2 class="section__title">Proyek Terpilih</h2>
+    <div class="projects__grid" id="projects-content">
+      <p class="loading-text">Memuat data proyek...</p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section section--contact reveal">
+    <p class="section__eyebrow">kontak</p>
+    <h2 class="section__title">Mari Berkolaborasi</h2>
+    <p class="section__subtitle">Punya proyek atau pertanyaan? Kirim pesan lewat form di bawah.</p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama kamu" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+      </div>
+      <div class="form-group">
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan kamu di sini..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary" id="contact-submit">Kirim Pesan</button>
+      <p class="form-status" id="form-status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>Dibuat dengan Flask, TiDB, Cloudinary &amp; Resend.</p>
+  </footer>
+
+  <script src="Frontend/profil/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.project-admin-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-admin-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--bg-muted);
+}
+
+.project-admin-card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.project-admin-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.project-admin-card__desc {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 0;
+  flex: 1;
+}
+
+.project-admin-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}

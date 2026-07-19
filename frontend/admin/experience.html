@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience - Admin Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+</head>
+<body>
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__logo">Admin Panel</div>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__link">🏠 Dashboard</a>
+        <a href="profil.html" class="sidebar__link">📄 Profil</a>
+        <a href="experience.html" class="sidebar__link sidebar__link--active">💼 Experience</a>
+        <a href="projects.html" class="sidebar__link">📁 Projects</a>
+        <a href="skills.html" class="sidebar__link">⭐ Skills</a>
+        <a href="social.html" class="sidebar__link">🔗 Social Links</a>
+        <a href="akun.html" class="sidebar__link">👤 Akun</a>
+      </nav>
+      <div class="sidebar__logout">
+        <a href="#" id="logout-link" class="sidebar__link">↪ Logout</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="main-content__header">
+        <h1 class="main-content__title">Experience</h1>
+        <button class="btn btn--primary" id="btn-add-exp">+ Tambah Pengalaman</button>
+      </div>
+
+      <div class="data-list" id="experience-list">
+        <p class="empty-state">Memuat data pengalaman...</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= MODAL FORM ================= -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal">
+      <h2 class="modal__title" id="modal-title">Tambah Pengalaman</h2>
+      <form id="exp-form">
+        <input type="hidden" id="exp-id" />
+        <div class="form-group">
+          <label for="posisi">Posisi</label>
+          <input type="text" id="posisi" placeholder="Contoh: Web Developer Intern" required />
+        </div>
+        <div class="form-group">
+          <label for="perusahaan">Perusahaan / Organisasi</label>
+          <input type="text" id="perusahaan" placeholder="Contoh: PT Contoh Teknologi" />
+        </div>
+        <div class="form-group">
+          <label for="durasi">Durasi</label>
+          <input type="text" id="durasi" placeholder="Contoh: Jan 2025 - Jun 2025" />
+        </div>
+        <div class="form-group">
+          <label for="deskripsi">Deskripsi</label>
+          <textarea id="deskripsi" rows="4" placeholder="Ceritakan apa yang kamu kerjakan..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary" id="exp-submit">Simpan</button>
+          <button type="button" class="btn btn--ghost" id="btn-cancel">Batal</button>
+        </div>
+        <p class="status-text" id="exp-status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/base.js"></script>
+  <script src="js/experience.js"></script>
+</body>
+</html>
